@@ -5,10 +5,10 @@ public class MenuItem {
     public String name;
     public String description;
     public String imageURL;
-    public int price;
+    private String price;
     public String category;
 
-    public MenuItem(name, String description, imageURL, price, category) {
+    public MenuItem(String name, String description, String imageURL, String price, String category) {
         this.name = name;
         this.description = description;
         this.imageURL = imageURL;
@@ -16,6 +16,7 @@ public class MenuItem {
         this.category = category;
     }
 
+    // Getters and setters.
     public String getName() {
         return name;
     }
@@ -28,8 +29,9 @@ public class MenuItem {
         return imageURL;
     }
 
-    public int getPrice() {
-        return price;
+    public String getPrice() {
+        String euro = "€" + price + "0";
+        return euro;
     }
 
     public String getCategory() {
@@ -48,7 +50,7 @@ public class MenuItem {
         this.imageURL = imageURL;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 
@@ -56,6 +58,3 @@ public class MenuItem {
         this.category = category;
     }
 }
-
-
-
